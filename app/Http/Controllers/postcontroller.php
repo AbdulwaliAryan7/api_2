@@ -51,6 +51,18 @@ class postcontroller extends Controller
             ], 201);
        
     }
+
+    public function show($id){
+        $post = Post::find($id);
+        return response()->json([
+            'message' => 'Post fetched successfully',
+            'post' => $post
+        ], 200);
+    }
+    public function edit($id){
+        $post = Post::find($id);
+        return view('post.edit', compact('post'));
+    }
     
 
 }
