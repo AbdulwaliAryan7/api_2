@@ -8,3 +8,4 @@ Route::get('/', function () {
 });
 
 Route::get('/imporate/create', [ImporateController::class, 'create'])->name('imporate.create');
+Route::get('/imporate', [ImporateController::class, 'index'])->name('imporate.index');
